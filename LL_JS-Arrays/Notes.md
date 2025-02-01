@@ -86,3 +86,36 @@ arr[0] = "Jake";
 - `find()`: Returns the first element that passes the testing function. No match? Returns **undefined**.
 - `findIndex()`: Returns the first index that passes the testing function. No match? Returns **-1**.
 - **Callback Function**: function(element, index, array)
+
+## 3. Evaluating Data for a Single Value
+
+### Does the array includes an element?
+
+- `includes()`: Returns a boolean to indicate if an array includes a specific value.
+- **Synatax**: 
+  - array.includes(value, fromIndex)
+  - Note: Value is case sensitive, fromIndex is the start index from where you want to start the search.
+- eg:
+  ```javascript
+  const scores = [8, 2, 4, 10, 9, 3];
+  scores.includes(10); // true
+  ```
+
+### Do elements pass a test?
+
+- `some()` & `every()`: Return booleans based on a function.
+- Does the array contain **some** elements that pass the test?
+- Does **every** element in the array pass the test?
+- `some()`: Returns a boolean to indicate if an array contains some elements that match the criteria provided.
+- `every()`: Returns a boolean to indicate if every element in the array matches the criteria provided.
+- **Synatx**:
+  ```javascript
+  array.some(function(element, index, array), thisArg);
+  array.every(function(element, index, array), thisArg);
+  ```
+- eg:
+  ```javascript
+  const temps = [90, 88, 85, 92, 84, 99];
+  const someBelow90 = temps.some((temp) => temp < 90); // true
+  const everyAbove80 = temps.every((temp) => temp > 80); // true
+  ```
